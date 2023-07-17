@@ -31,6 +31,8 @@ export const insert = async (
   const values = Object.values(data);
   const placeholders = values.map(() => "?").join(", ");
 
+  //Should have add a list of the users that werent inserted
+
   const sql = `INSERT IGNORE INTO ${table} (${keys}) VALUES (${placeholders})`;
 
   const result = await db.query(sql, values);
@@ -45,6 +47,7 @@ export const updateById = async (
     .map((key) => `${key} = ?`)
     .join(", ");
   const values = Object.values(data);
+  //missed edge case which I am able edit ID from postman
   const sql = `UPDATE ${tableName} SET ${keys} WHERE id = ?`;
   const [results] = await db.query(sql, [...values, id]);
   return results;
@@ -83,6 +86,7 @@ export const searchByField = async (
   return results;
 };
 
+//didnt use it evantually
 export const getRowCount = async (tableName: string): Promise<number> => {
   const query = `SELECT COUNT(*) as count FROM ${tableName};`;
   const result: any = await db.query(query);
