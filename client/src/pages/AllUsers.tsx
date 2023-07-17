@@ -5,6 +5,8 @@ import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { toast } from "react-toastify";
 import HelperFunctions from "../utils/HelperFunctions";
 
+//should have put this interface in higher level and pass as prop to all components
+
 export interface User {
   fullName: string;
   id: number;
@@ -14,6 +16,7 @@ export interface User {
 }
 
 const AllUsers = () => {
+  //Generlized states with custom hooks
   const [users, setUsers] = useState<User[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
@@ -41,6 +44,7 @@ const AllUsers = () => {
   const handleEditUser = async (userId: number, updatedUser: User) => {
     const { fullName, id, phoneNumber, ipAddress, email } = updatedUser;
 
+    //use the interface that will be imported
     const validationResult: string | null = HelperFunctions.validateUserFields(
       fullName,
       id,

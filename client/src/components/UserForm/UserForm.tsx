@@ -27,6 +27,8 @@ const UserForm: React.FC<UserFormProps> = ({
   setIpAddress,
   setEmail,
 }) => (
+  //Should have put all fields in array and use map in order to input
+
   <>
     <form action="" className="row g-3">
       <input

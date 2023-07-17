@@ -11,6 +11,22 @@ const Sidebar = () => {
       tabIndex={-1}
       id="sidebar"
     >
+      {/*change to the following*/}
+      {/*const NavLinkItem = ({ to, icon, text }) => {
+  return (
+    <li>
+      <Link to={to} className="nav-link px-3">
+        <span className="me-2">{icon}</span>
+        <span>{text}</span>
+      </Link>
+    </li>
+  );
+};
+
+// Usage
+<NavLinkItem to="/" icon={<AiOutlineUserAdd />} text="Add Client" />
+<NavLinkItem to="/all-users" icon={<FaListAlt />} text="All Clients" />
+<NavLinkItem to="/file-upload" icon={<AiOutlineCloudUpload />} text="Import File" */}
       <div className="offcanvas-body p-0">
         <nav className="navbar-dark">
           <ul className="navbar-nav">

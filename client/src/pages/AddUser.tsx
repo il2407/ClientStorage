@@ -6,6 +6,7 @@ import HelperFunctions from "../utils/HelperFunctions";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
+//I should have sent this interface as prop to use in userform
 export interface User {
   fullName: string;
   id: number;
@@ -75,7 +76,7 @@ const AddUser = () => {
       <main>
         <div className="container-fluid">
           <div className="container">
-            <h3 className="banner-style">Add User </h3>
+            <h3 className="banner-style">Add Client </h3>
             <br />
             <UserForm
               fullName={fullName}
