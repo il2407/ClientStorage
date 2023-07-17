@@ -1,0 +1,24 @@
+/* UserForm.css */
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input:focus {
+  border-color: #6e00ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(110, 0, 255, 0.1);
+}

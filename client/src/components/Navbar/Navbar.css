@@ -1,0 +1,8 @@
+.proximeet-navbar-logo {
+  width: 210px;
+}
+.proximeet-navbar {
+  background-image: url("../../assets/images/sidebarPattern.png");
+
+  background-color: rgb(184, 191, 240);
+}
